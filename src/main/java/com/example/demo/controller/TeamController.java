@@ -13,12 +13,12 @@ public class TeamController {
 
 	@Autowired TeamDao teamDao;
 	
-	@GetMapping("/hi")
+	@GetMapping("/teams")
 	public Iterable<Team> getTeams() {
 		return teamDao.findAll();
 	}
 	
-	@GetMapping("/ta/{id}")
+	@GetMapping("/teams/{id}")
 	public Team getTeam(@PathVariable Long id){
 		return teamDao.findById(id).get();
 	}
